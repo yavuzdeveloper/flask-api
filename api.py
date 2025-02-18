@@ -97,7 +97,8 @@ def chat():
     # Generate chatbot response
     reply_ids = model.generate(
         inputs,
-        max_length=100,
+        max_length=150,
+        min_length=20,
         pad_token_id=tokenizer.eos_token_id,
         num_return_sequences=1,
         do_sample=True, 
